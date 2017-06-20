@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   patch 'users/:id' => 'users#update'
   put 'users/:id' => 'users#update'
   delete 'users/:id' => 'users#destroy'
+
+
+  resources :users, only: [:new, :create, :update, :destroy]
 end
